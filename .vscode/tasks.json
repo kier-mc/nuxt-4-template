@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "- Run automated tests and start development server",
+            "dependsOn": ["Local Server", "Test Watcher"],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "type": "shell",
+            "command": "bun run dev",
+            "problemMatcher": [],
+            "label": "Local Server",
+            "detail": "Launches the development server within the currently open terminal",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "type": "shell",
+            "command": "bun run test",
+            "problemMatcher": [],
+            "label": "Test Watcher",
+            "detail": "Initiates automated testing with a watcher in a new terminal",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}
