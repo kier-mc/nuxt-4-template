@@ -15,7 +15,7 @@
             "command": "bun run dev",
             "problemMatcher": [],
             "label": "Local Server",
-            "detail": "Launches the development server within the currently open terminal",
+            "detail": "Launches the development server in a new terminal",
             "presentation": {
                 "reveal": "always",
                 "panel": "new"
