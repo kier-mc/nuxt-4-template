@@ -13,7 +13,6 @@ export default defineNuxtConfig({
     },
     modules: [
         "@nuxt/test-utils/module",
-        "@nuxtjs/stylelint-module",
         "@vueuse/nuxt",
     ],
     vite: {
