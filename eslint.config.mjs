@@ -17,5 +17,6 @@ export default antfu(
             quotes: "double",
             semi: true,
         },
+        typescript: true,
     },
 );
