@@ -11,7 +11,11 @@ export default defineNuxtConfig({
     future: {
         compatibilityVersion: 4,
     },
-    modules: ["@nuxt/test-utils/module", "@vueuse/nuxt"],
+    modules: [
+        "@nuxt/test-utils/module",
+        "@nuxtjs/stylelint-module",
+        "@vueuse/nuxt",
+    ],
     vite: {
         css: {
             preprocessorOptions: {

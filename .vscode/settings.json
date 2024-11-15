@@ -41,5 +41,8 @@
         "toml",
         "gql",
         "graphql"
-    ]
+    ],
+
+    // Enable stylelint validation
+    "stylelint.validate": ["css", "scss", "vue"]
 }
