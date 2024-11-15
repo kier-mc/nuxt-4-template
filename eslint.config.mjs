@@ -5,6 +5,11 @@ export default antfu(
         formatters: {
             css: true,
         },
+        languageOptions: {
+            parserOptions: {
+                projectService: true,
+            },
+        },
         rules: {
             "antfu/if-newline": "off",
             "no-console": "warn",
