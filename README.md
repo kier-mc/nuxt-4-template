@@ -4,7 +4,8 @@
 A Nuxt 3 (Nuxt 4 ready) scaffold with a minimally-preconfigured structure and test environment.
 Designed for simplicity, modularity and extensibility.
 Comes with some mild opinions that are easily overridden.
-Leverages `@antfu/eslint-config` for customisable linting and styling.
+Leverages `@antfu/eslint-config` for customisable linting and styling across HTML/TS,
+and `stylelint` for CSS/SCSS coverage.
 
 ## Usage
 1. Clone the repo.
@@ -20,6 +21,8 @@ Leverages `@antfu/eslint-config` for customisable linting and styling.
     - Configured to allow testing live server endpoints within your local environment.
 - AntFu's ESLint config:
     - Default VSCode config supplied in `.vscode` directory.
+- Stylelint:
+    - Uses `stylelint-config-recommended-scss` and `stylelint-config-recommended-vue` as sensible defaults.
 
 ## Structure
 ### `app` directory
@@ -51,6 +54,9 @@ At the root folder:
     - [Options](https://eslint-config.antfu.me/configs).
 - `.nuxt.config.ts` to configure Nuxt/Vue/Vite.
     - [Options](https://nuxt.com/docs/api/nuxt-config).
+- `stylelint.config.js` to configure Stylelint.
+    - Works out of the box with the VSCode Stylelint plugin.
+    - [Options](https://stylelint.io/user-guide/configure).
 - `.vitest.config.ts` to configure Vitest.
     - [Options](https://vitest.dev/config/).
 
