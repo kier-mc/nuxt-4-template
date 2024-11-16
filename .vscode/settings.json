@@ -44,5 +44,11 @@
     ],
 
     // Enable stylelint validation
-    "stylelint.validate": ["css", "scss", "vue"]
+    "stylelint.validate": ["css", "scss", "vue"],
+
+    // Enable VSCode language features for SCSS files
+    "[scss]": {
+        "editor.defaultFormatter": "vscode.css-language-features",
+        "editor.formatOnSave": true
+    }
 }
