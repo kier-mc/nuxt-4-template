@@ -49,6 +49,7 @@
     // Enable VSCode language features for SCSS files
     "[scss]": {
         "editor.defaultFormatter": "vscode.css-language-features",
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "files.insertFinalNewline": true
     }
 }
