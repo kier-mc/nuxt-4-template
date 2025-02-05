@@ -27,23 +27,8 @@ export default antfu(
                 "ts/naming-convention": [
                     "error",
                     {
-                        selector: "variable",
-                        format: ["camelCase", "UPPER_CASE"],
-                    },
-                    {
-                        selector: "variable",
-                        types: ["boolean"],
-                        format: ["PascalCase"],
-                        prefix: ["can", "did", "has", "is", "should", "will"],
-                    },
-                    {
                         selector: "typeParameter",
                         format: ["PascalCase"],
-                        prefix: ["T"],
-                    },
-                    {
-                        selector: ["objectLiteralMethod", "objectLiteralProperty"],
-                        format: ["camelCase", "snake_case", "UPPER_CASE"],
                     },
                 ],
             },
