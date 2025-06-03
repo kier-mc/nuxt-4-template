@@ -1,7 +1,10 @@
 # Nuxt 3/4 Scaffold
 
 ## Introduction
-A Nuxt 3 (Nuxt 4 ready) scaffold with a minimally-preconfigured structure and test environment.
+A ~~Nuxt 3~~ Nuxt 4 alpha scaffold with a minimally-preconfigured structure and test environment.
+Will be updated for Nuxt v`4.0.0` on release.
+Expect some hitches - run `bun update --latest` to roll back to Nuxt 3 if needed.
+
 Designed for simplicity, modularity and extensibility.
 Comes with some mild opinions that are easily overridden.
 Leverages `@antfu/eslint-config` for customisable linting and styling across HTML/TS,
