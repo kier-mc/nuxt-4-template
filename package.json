@@ -34,5 +34,9 @@
         "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
         "stylelint-scss": "^6.12.1",
         "vitest": "^3.2.4"
-    }
+    },
+    "trustedDependencies": [
+        "@parcel/watcher",
+        "esbuild"
+    ]
 }
