@@ -92,7 +92,7 @@ As this scaffold serves as a monorepo and the API is intended to be built intern
 To run the example server test:
 
 1. Move `server.spec.ts` into `/server/api/`.
-2. Set `ENABLE_EXCLUDE_DIRECTORY` to `false` in `vitest.config.ts` so the test can run.
+2. Set `ENABLE_EXAMPLE_TESTS` to `true` in `vitest.config.ts` so the test can run.
 3. Launch your development server with `bun run dev`.
 4. Run Vitest with `bun run test` in a seperate terminal.
 
