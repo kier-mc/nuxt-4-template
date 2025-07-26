@@ -12,5 +12,6 @@ export default {
     ],
     rules: {
         "plugin/declaration-block-no-ignored-properties": true,
+        "selector-class-pattern": "^(?:[a-z]+(-[a-z0-9]+)*|[a-z]+([A-Z][a-z0-9]*)*)(?:__(?:[a-z]+(-[a-z0-9]+)*))?(?:--(?:[a-z]+(-[a-z0-9]+)*))?$",
     },
 };
