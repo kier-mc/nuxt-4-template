@@ -1,9 +1,13 @@
-# Nuxt 3/4 Scaffold
+# Nuxt 4 Scaffold
+
+## 🚨 NOTE
+
+After upgrading to Nuxt 4, test runners are currently failing due to an inability to resolve `#imports` in `@nuxt/test-utils`.
+I suspect this is out of my control and will be patched by the core team in the near future.
+Please note that you may have to downgrade to Nuxt 3, forego tests temporarily or attempt to implement your own solution in order to get them working.
 
 ## Introduction
-A ~~Nuxt 3~~ Nuxt 4 alpha scaffold with a minimally-preconfigured structure and test environment.
-Will be updated for Nuxt v`4.0.0` on release.
-Expect some hitches - run `bun update --latest` to roll back to Nuxt 3 if needed.
+A Nuxt 4 scaffold with a minimally-preconfigured structure and test environment.
 
 Designed for simplicity, modularity and extensibility.
 Comes with some mild opinions that are easily overridden.
