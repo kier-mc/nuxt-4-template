@@ -67,7 +67,7 @@ At the root folder:
 - `.vitest.config.ts` to configure Vitest.
     - [Options](https://vitest.dev/config/).
 
-If you prefer not to use Bun, delete `bun.lockb` and then run `install` via your package manager of choice (`yarn`, `npm` etc).
+If you prefer not to use Bun, delete `bun.lock` and then run `install` via your package manager of choice (`yarn`, `npm` etc).
 
 ## Testing Strategy
 The default environment is `happy-dom`.
