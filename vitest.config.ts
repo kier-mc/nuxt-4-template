@@ -1,7 +1,7 @@
 import { defineVitestConfig } from "@nuxt/test-utils/config";
 import { configDefaults } from "vitest/config";
 
-const ENABLE_EXCLUDE_DIRECTORY = true;
+const ENABLE_EXAMPLE_TESTS = false;
 
 export default defineVitestConfig({
     test: {
@@ -13,7 +13,7 @@ export default defineVitestConfig({
         environment: "happy-dom",
         exclude: [
             ...configDefaults.exclude,
-            ENABLE_EXCLUDE_DIRECTORY ? "**/test/_exclude/**" : "",
+            ENABLE_EXAMPLE_TESTS ? "**/test/_example/**" : "",
         ],
     },
 });
