@@ -6,5 +6,11 @@ export default {
         "stylelint-config-recommended-vue",
         "stylelint-config-recommended-vue/scss",
     ],
-    plugins: ["stylelint-scss"],
+    plugins: [
+        "stylelint-declaration-block-no-ignored-properties",
+        "stylelint-scss",
+    ],
+    rules: {
+        "plugin/declaration-block-no-ignored-properties": true,
+    },
 };
