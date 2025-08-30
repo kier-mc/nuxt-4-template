@@ -33,7 +33,7 @@ textarea {
 }
 
 textarea:not([rows]) {
-    min-height: 10em;
+    min-block-size: 10em;
 }
 
 ol[role="list"],
