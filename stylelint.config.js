@@ -9,6 +9,7 @@ export default {
     plugins: [
         "stylelint-declaration-block-no-ignored-properties",
         "stylelint-plugin-defensive-css",
+        "stylelint-plugin-logical-css",
         "stylelint-scss",
     ],
     rules: {
@@ -25,6 +26,18 @@ export default {
                 "scrollbar-gutter": true,
                 "vendor-prefix-grouping": true,
                 "severity": "warning",
+            },
+        ],
+        "plugin/use-logical-properties-and-values": [
+            true,
+            {
+                severity: "warning",
+            },
+        ],
+        "plugin/use-logical-units": [
+            true,
+            {
+                severity: "warning",
             },
         ],
         "selector-class-pattern": "^(?:[a-z]+(-[a-z0-9]+)*|[a-z]+([A-Z][a-z0-9]*)*)(?:__(?:[a-z]+(-[a-z0-9]+)*))?(?:--(?:[a-z]+(-[a-z0-9]+)*))?$",
