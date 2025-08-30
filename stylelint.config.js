@@ -8,10 +8,24 @@ export default {
     ],
     plugins: [
         "stylelint-declaration-block-no-ignored-properties",
+        "stylelint-plugin-defensive-css",
         "stylelint-scss",
     ],
     rules: {
         "plugin/declaration-block-no-ignored-properties": true,
+        "plugin/use-defensive-css": [
+            true,
+            {
+                "accidental-hover": true,
+                "background-repeat": true,
+                "custom-property-fallbacks": true,
+                "flex-wrapping": true,
+                "scroll-chaining": true,
+                "scrollbar-gutter": true,
+                "vendor-prefix-grouping": true,
+                "severity": "warning",
+            },
+        ],
         "selector-class-pattern": "^(?:[a-z]+(-[a-z0-9]+)*|[a-z]+([A-Z][a-z0-9]*)*)(?:__(?:[a-z]+(-[a-z0-9]+)*))?(?:--(?:[a-z]+(-[a-z0-9]+)*))?$",
     },
 };
