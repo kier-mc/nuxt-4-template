@@ -1,5 +1,3 @@
-// @vitest-environment nuxt
-// Example tests for working directly with live Nuxt server routes
 import { describe, expect, it } from "vitest";
 
 const ENDPOINT = "http://localhost:3000/api/test";

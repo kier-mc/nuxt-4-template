@@ -1,6 +1,3 @@
-// @vitest-environment nuxt
-// Example tests for working directly with Nuxt components
-
 import { mountSuspended } from "@nuxt/test-utils/runtime";
 import { describe, expect, it } from "vitest";
 import Component from "./examples/component.vue";
