@@ -3,17 +3,8 @@
 ## Introduction
 A Nuxt 4 scaffold with a minimally-preconfigured structure and test environment.
 Focused on streamlining the developer experience and providing a stable foundation for most projects to be built on top of.
-
-❌ Bloated “SaaS templates” that ship with ten packages for state management, forms, styling, payments, and whatever else was trending on Twitter last week.<br/>
-✅ A lean starting point with only what you actually need (plus [VueUse](https://vueuse.org/)) so you’re not wasting time ripping out packages you never needed in the first place.
-
-❌ Chasing shiny new tools for the sake of it.<br/>
-✅ Investing in strict linting and conventions that make your code faster, safer, and easier to maintain.
-
-❌ Treating testing as an afterthought.<br/>
-✅ Built-in testing setup with minimal, real-world examples that help you write your own.
-
-Designed for simplicity, modularity and extensibility.
+Emphasis on providing an environment that helps you to write robust code, as opposed to including every trendy package in the Nuxt ecosystem by default.
+Designed for simplicity, customisability and extensibility.
 
 ## Usage
 1. Clone the repo.
