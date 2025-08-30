@@ -12,6 +12,7 @@ export default {
         "stylelint-scss",
     ],
     rules: {
+        "declaration-property-value-no-unknown": true,
         "plugin/declaration-block-no-ignored-properties": true,
         "plugin/use-defensive-css": [
             true,
