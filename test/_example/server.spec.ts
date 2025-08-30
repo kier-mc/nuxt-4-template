@@ -2,7 +2,7 @@
 // Example tests for working directly with live Nuxt server routes
 import { describe, expect, it } from "vitest";
 
-const ENDPOINT = "api/test";
+const ENDPOINT = "http://localhost:3000/api/test";
 
 describe("get", async () => {
     it("can fetch data from a server route", async () => {
