@@ -1,19 +1,21 @@
-import { defineVitestConfig } from "@nuxt/test-utils/config";
-import { configDefaults } from "vitest/config";
+import { defineVitestProject } from "@nuxt/test-utils/config";
+import { defineConfig } from "vitest/config";
 
-const ENABLE_EXAMPLE_TESTS = false;
-
-export default defineVitestConfig({
+export default defineConfig({
     test: {
-        css: {
-            modules: {
-                classNameStrategy: "non-scoped",
-            },
-        },
-        environment: "happy-dom",
-        exclude: [
-            ...configDefaults.exclude,
-            ENABLE_EXAMPLE_TESTS ? "**/test/_example/**" : "",
+        projects: [
+            await defineVitestProject({
+                test: {
+                    name: "nuxt",
+                    include: ["test/**/*.{test,spec}.ts"],
+                    environment: "nuxt",
+                    css: {
+                        modules: {
+                            classNameStrategy: "non-scoped",
+                        },
+                    },
+                },
+            }),
         ],
     },
 });
