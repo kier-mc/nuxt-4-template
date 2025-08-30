@@ -1,16 +1,10 @@
 # Nuxt 4 Scaffold
 
-## 🚨 NOTE
-
-After upgrading to Nuxt 4, test runners are currently failing due to an inability to resolve `#imports` in `@nuxt/test-utils`.
-I suspect this is out of my control and will be patched by the core team in the near future.
-Please note that you may have to downgrade to Nuxt 3, forego tests temporarily or attempt to implement your own solution in order to get them working.
-
 ## Introduction
 A Nuxt 4 scaffold with a minimally-preconfigured structure and test environment.
 
 Designed for simplicity, modularity and extensibility.
-Comes with some mild opinions that are easily overridden.
+Comes with some opinions that are easily overridden.
 Leverages `@antfu/eslint-config` for customisable linting and styling across HTML/TS,
 and `stylelint` for CSS/SCSS coverage.
 
@@ -50,8 +44,7 @@ Only executes if you are in a development environment.
 
 ### `test` directory
 A directory to contain automated tests.
-Contains an `_exclude` directory that is configured to be ignored from testing by default.
-Has two files and two related tests.
+Has two example files and two related example tests, a Vue/Nuxt component and a Nuxt server route.
 
 ## Configuration
 At the root folder:
@@ -70,20 +63,21 @@ At the root folder:
 If you prefer not to use Bun, delete `bun.lock` and then run `install` via your package manager of choice (`yarn`, `npm` etc).
 
 ## Testing Strategy
-The default environment is `happy-dom`.
-Opt in to a Nuxt environment by adding `// @vitest-environment nuxt` as the first line of the test file.
-If you prefer this to be the other way around or you want to change other options, refer to the config section above.
-
+This scaffold uses Vitest's [Test Projects](https://vitest.dev/guide/projects.html#defining-projects) to configure test environments.
+By default, one environment ("`nuxt`") is included.
 No coverage provider (`v8`, `istanbul` etc) is provided by default.
+
+The default glob pattern will pick up any file that follows the convention `*.{test,spec}.ts` in any directory/subdirectory.
 
 ### JS/TS Files
 Import your files and [use Vitest](https://vitest.dev/guide/).
+You may need to configure a seperate project if the `nuxt` environment isn't suitable.
 
 ### Vue SFCs
 The example `component.spec.ts` contains some basic examples that cover testing common SFC functionality.
 
 [Follow the guide](https://nuxt.com/docs/getting-started/testing) on the Nuxt docs for futher guidance.
-`mountSuspended` wraps the `mount` function from `@vue/test=utils`, so [refer to their docs](https://test-utils.vuejs.org/api/) too for further options.
+`mountSuspended` wraps the `mount` function from `@vue/test-utils`, so [refer to their docs](https://test-utils.vuejs.org/api/) too for further options.
 
 ### H3 Server Routes
 The example `server.spec.ts` file is designed to test a live endpoint from your local environment.
@@ -91,10 +85,10 @@ As this scaffold serves as a monorepo and the API is intended to be built intern
 
 To run the example server test:
 
-1. Move `server.spec.ts` into `/server/api/`.
-2. Set `ENABLE_EXAMPLE_TESTS` to `true` in `vitest.config.ts` so the test can run.
-3. Launch your development server with `bun run dev`.
-4. Run Vitest with `bun run test` in a seperate terminal.
+1. Move `/test/_example/examples/test.ts` into `/server/api/`.
+2. Launch your development server with `bun run dev`.
+3. Run Vitest with `bun run test` in a seperate terminal.
+    - Do not run `bun test` as shorthand. This will initiate Bun's test runner, which does not have the correct context and will fail.
 
 Refer to the H3 [event handler](https://h3.unjs.io/guide/event-handler) and [event object](https://h3.unjs.io/guide/event) for more info,
 as well as the Nuxt [server](https://nuxt.com/docs/guide/directory-structure/server) docs for Nuxt-specific usage.
