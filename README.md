@@ -24,6 +24,9 @@ and `stylelint` for CSS/SCSS coverage.
     - Default VSCode config supplied in `.vscode` directory.
 - Stylelint:
     - Uses `stylelint-config-recommended-scss` and `stylelint-config-recommended-vue` as sensible defaults.
+    - Includes some stricter rulesets for helping write build modern, robust CSS.
+        - [Logical properties/values](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values) are enforced via `stylelint-plugin-logical-css`.
+        - Certain [defensive CSS principles](https://defensivecss.dev/) are enforced via `styleline-plugin-defensive-css`.
 
 ## Structure
 ### `app` directory
