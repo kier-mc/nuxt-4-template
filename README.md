@@ -2,31 +2,39 @@
 
 ## Introduction
 A Nuxt 4 scaffold with a minimally-preconfigured structure and test environment.
+Focused on streamlining the developer experience and providing a stable foundation for most projects to be built on top of.
+
+❌ Bloated “SaaS templates” that ship with ten packages for state management, forms, styling, payments, and whatever else was trending on Twitter last week.<br/>
+✅ A lean starting point with only what you actually need (plus [VueUse](https://vueuse.org/)) so you’re not wasting time ripping out packages you never needed in the first place.
+
+❌ Chasing shiny new tools for the sake of it.<br/>
+✅ Investing in strict linting and conventions that make your code faster, safer, and easier to maintain.
+
+❌ Treating testing as an afterthought.<br/>
+✅ Built-in testing setup with minimal, real-world examples that help you write your own.
 
 Designed for simplicity, modularity and extensibility.
-Comes with some opinions that are easily overridden.
-Leverages `@antfu/eslint-config` for customisable linting and styling across HTML/TS,
-and `stylelint` for CSS/SCSS coverage.
 
 ## Usage
 1. Clone the repo.
-2. Configure any settings you want to change and add any additional packages you want.
+2. Run `bun install` (if you prefer not to use Bun, delete `bun.lock` and then run `install` via your package manager of choice).
+3. Configure any settings you want to change and add any additional packages you want.
     - Run `bunx eslint --fix` to apply any changed ESLint rules.
-3. Run `bun install`.
 
 ## Features
-- Bun as a runtime environment.
-- SCSS as a preprocessor:
-    - Configured for testing use with CSS module (`<style module>`) syntax.
-- Vitest (and related packages i.e. `@nuxt/test-utils`) as a test runner:
-    - Configured to allow testing live server endpoints within your local environment.
-- AntFu's ESLint config:
-    - Default VSCode config supplied in `.vscode` directory.
-- Stylelint:
-    - Uses `stylelint-config-recommended-scss` and `stylelint-config-recommended-vue` as sensible defaults.
-    - Includes some stricter rulesets for helping write build modern, robust CSS.
-        - [Logical properties/values](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values) are enforced via `stylelint-plugin-logical-css`.
-        - Certain [defensive CSS principles](https://defensivecss.dev/) are enforced via `styleline-plugin-defensive-css`.
+### Nuxt/Vue
+Leverages the latest versions of Nuxt/Vue, preconfigured for page-based routing using the Nuxt 4 directory structure.
+Additionally includes [VueUse](https://vueuse.org/) for its excellent utility function support.
+
+### Vitest
+Preconfigured and including example tests for both Vue SFCs and Nuxt/H3 server routes.
+Ready for extension, as required.
+
+### Linting/Formatting
+Vue/TS files are covered by Antfu's ESLint config, with a few settings adjusted to my personal preferences.
+SCSS/CSS files are covered by Stylelint, using `stylelint-config-recommended-scss` and `stylelint-config-recommended-vue` as sensible default rulesets.
+[Logical properties/values](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values) are enforced via `stylelint-plugin-logical-css`.
+Certain [defensive CSS principles](https://defensivecss.dev/) are enforced via `styleline-plugin-defensive-css`.
 
 ## Structure
 ### `app` directory
@@ -63,8 +71,6 @@ At the root folder:
 - `.vitest.config.ts` to configure Vitest.
     - [Options](https://vitest.dev/config/).
 
-If you prefer not to use Bun, delete `bun.lock` and then run `install` via your package manager of choice (`yarn`, `npm` etc).
-
 ## Testing Strategy
 This scaffold uses Vitest's [Test Projects](https://vitest.dev/guide/projects.html#defining-projects) to configure test environments.
 By default, one environment ("`nuxt`") is included.
@@ -74,7 +80,7 @@ The default glob pattern will pick up any file that follows the convention `*.{t
 
 ### JS/TS Files
 Import your files and [use Vitest](https://vitest.dev/guide/).
-You may need to configure a seperate project if the `nuxt` environment isn't suitable.
+You may need to configure a seperate project if the `nuxt` environment isn't suitable for your needs.
 
 ### Vue SFCs
 The example `component.spec.ts` contains some basic examples that cover testing common SFC functionality.
