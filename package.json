@@ -24,7 +24,7 @@
         "@vueuse/nuxt": "^13.9.0",
         "eslint": "^9.37.0",
         "eslint-plugin-format": "^1.0.2",
-        "happy-dom": "^19.0.2",
+        "happy-dom": "^20.0.0",
         "sass": "^1.93.2",
         "stylelint": "^16.25.0",
         "stylelint-config-recommended-scss": "^16.0.2",
