@@ -13,7 +13,6 @@ export default antfu(
         rules: {
             "antfu/if-newline": "off",
             "no-console": "warn",
-            "perfectionist/sort-named-imports": ["warn", { groupKind: "types-first" }],
             "symbol-description": "off",
         },
         stylistic: {
