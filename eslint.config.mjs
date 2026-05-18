@@ -32,5 +32,8 @@ export default antfu(
                 ],
             },
         },
+        vue: {
+            a11y: true,
+        },
     },
 );
