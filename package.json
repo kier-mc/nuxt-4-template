@@ -11,31 +11,31 @@
         "test": "vitest"
     },
     "dependencies": {
-        "nuxt": "^4.4.2",
-        "vue": "^3.5.32"
+        "nuxt": "^4.4.6",
+        "vue": "^3.5.34"
     },
     "devDependencies": {
-        "@antfu/eslint-config": "^8.2.0",
-        "@nuxt/kit": "^4.4.2",
-        "@nuxt/test-utils": "^4.0.2",
+        "@antfu/eslint-config": "^8.3.0",
+        "@nuxt/kit": "^4.4.6",
+        "@nuxt/test-utils": "^4.0.3",
         "@testing-library/vue": "^8.1.0",
-        "@vue/test-utils": "^2.4.6",
-        "@vueuse/core": "^14.2.1",
-        "@vueuse/nuxt": "^14.2.1",
-        "eslint": "^10.2.0",
+        "@vue/test-utils": "^2.4.10",
+        "@vueuse/core": "^14.3.0",
+        "@vueuse/nuxt": "^14.3.0",
+        "eslint": "^10.4.0",
         "eslint-plugin-format": "^2.0.1",
         "happy-dom": "^20.9.0",
         "sass": "^1.99.0",
-        "stylelint": "^17.8.0",
+        "stylelint": "^17.11.1",
         "stylelint-config-recommended-scss": "^17.0.1",
         "stylelint-config-recommended-vue": "^1.6.1",
         "stylelint-config-standard": "^40.0.0",
         "stylelint-config-standard-scss": "^17.0.0",
         "stylelint-declaration-block-no-ignored-properties": "^3.0.0",
-        "stylelint-plugin-defensive-css": "^2.9.0",
+        "stylelint-plugin-defensive-css": "^2.9.2",
         "stylelint-plugin-logical-css": "^2.1.0",
-        "stylelint-scss": "^7.0.0",
-        "vitest": "^4.1.4"
+        "stylelint-scss": "^7.1.1",
+        "vitest": "^4.1.6"
     },
     "trustedDependencies": [
         "@parcel/watcher",
