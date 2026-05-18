@@ -10,7 +10,7 @@ Designed for simplicity, customisability and extensibility.
 1. Clone the repo.
 2. Run `bun install` (if you prefer not to use Bun, delete `bun.lock` and then run `install` via your package manager of choice).
 3. Configure any settings you want to change and add any additional packages you want.
-    - Run `bunx eslint --fix` to apply any changed ESLint rules.
+    - Run `bunx eslint --fix` and/or `bunx stylelint "**/*.{css,scss,vue} --fix"` to ensure consistency.
 
 ## Features
 ### Nuxt/Vue
@@ -24,8 +24,13 @@ Ready for extension, as required.
 ### Linting/Formatting
 Vue/TS files are covered by Antfu's ESLint config, with a few settings adjusted to my personal preferences.
 SCSS/CSS files are covered by Stylelint, using `stylelint-config-recommended-scss` and `stylelint-config-recommended-vue` as sensible default rulesets.
-[Logical properties/values](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values) are enforced via `stylelint-plugin-logical-css`.
-Certain [defensive CSS principles](https://defensivecss.dev/) are enforced via `styleline-plugin-defensive-css`.
+Formatting is handled through `@stylistic/stylelint-plugin`.
+
+Additional linters are also included to help you to write better code:
+- CSS [Logical properties/values](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values) are enforced via `stylelint-plugin-logical-css`.
+- Certain [defensive CSS principles](https://defensivecss.dev/) are enforced via `styleline-plugin-defensive-css`.
+- CSS logical property order is enforced via `stylelint-config-clean-order`.
+- HTML accessibility best practices are enforced via `eslint-plugin-vuejs-accessibility`.
 
 ## Structure
 ### `app` directory
