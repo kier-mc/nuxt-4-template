@@ -41,6 +41,10 @@
         "stylelint-scss": "^7.2.0",
         "vitest": "^4.1.9"
     },
+    "overrides": {
+        "@vue/server-renderer": "^3.5.39",
+        "vue": "^3.5.39"
+    },
     "trustedDependencies": [
         "@parcel/watcher",
         "esbuild"
