@@ -10,7 +10,7 @@ Designed for simplicity, customisability and extensibility.
 1. Clone the repo.
 2. Run `bun install` (if you prefer not to use Bun, delete `bun.lock` and then run `install` via your package manager of choice).
 3. Configure any settings you want to change and add any additional packages you want.
-    - Run `bunx eslint --fix` and/or `bunx stylelint "**/*.{css,scss,vue} --fix"` to ensure consistency.
+    - Run `bunx eslint --fix` and/or `bunx stylelint "**/*.{css,scss,vue}" --fix` to ensure consistency.
 
 ## Features
 ### Nuxt/Vue
@@ -46,12 +46,14 @@ Contains a `ui` directory with some basic configuration, intended for reusable U
 
 ### `server` directory
 The main entry point for the H3 backend.
-Contains a `cors.ts` middleware file that allows testing live server endpoints in your local environment.
-Only executes if you are in a development environment.
+Contains an example API route (`api/test.ts`) that the e2e test exercises.
 
 ### `test` directory
-A directory to contain automated tests.
-Has two example files and two related example tests, a Vue/Nuxt component and a Nuxt server route.
+A directory to contain automated tests, split by environment:
+- `test/nuxt` - runtime/component tests that run in the `nuxt` environment (auto-included in the app's TypeScript project by Nuxt).
+- `test/e2e` - end-to-end tests that boot a real server and run in the `node` environment.
+
+Includes an example component test and an example server-route test.
 
 ## Configuration
 At the root folder:
@@ -69,31 +71,32 @@ At the root folder:
 
 ## Testing Strategy
 This scaffold uses Vitest's [Test Projects](https://vitest.dev/guide/projects.html#defining-projects) to configure test environments.
-By default, one environment ("`nuxt`") is included.
+Two projects are included:
+- `nuxt` - runs `test/nuxt/**` in the `nuxt` environment.
+- `e2e` - runs `test/e2e/**` in the `node` environment.
+
+`bun run test` runs both and passes from a clean clone - no separately-run dev server required.
 No coverage provider (`v8`, `istanbul` etc) is provided by default.
 
-The default glob pattern will pick up any file that follows the convention `*.{test,spec}.ts` in any directory/subdirectory.
+Each project picks up files matching `*.{test,spec}.ts` within its directory.
 
 ### JS/TS Files
 Import your files and [use Vitest](https://vitest.dev/guide/).
-You may need to configure a seperate project if the `nuxt` environment isn't suitable for your needs.
+You may need to configure a separate project if neither environment is suitable for your needs.
 
 ### Vue SFCs
-The example `component.spec.ts` contains some basic examples that cover testing common SFC functionality.
+The example `test/nuxt/component.spec.ts` contains some basic examples that cover testing common SFC functionality.
 
-[Follow the guide](https://nuxt.com/docs/getting-started/testing) on the Nuxt docs for futher guidance.
+[Follow the guide](https://nuxt.com/docs/getting-started/testing) on the Nuxt docs for further guidance.
 `mountSuspended` wraps the `mount` function from `@vue/test-utils`, so [refer to their docs](https://test-utils.vuejs.org/api/) too for further options.
 
 ### H3 Server Routes
-The example `server.spec.ts` file is designed to test a live endpoint from your local environment.
+The example `test/e2e/server.spec.ts` tests a live endpoint against the route in `server/api/test.ts`.
+It uses `setup()` from [`@nuxt/test-utils/e2e`](https://nuxt.com/docs/getting-started/testing#end-to-end-testing), which boots a Nuxt server for the duration of the suite, so the test is self-contained.
 As this scaffold serves as a monorepo and the API is intended to be built internally, this reduces the need for mocking responses.
 
-To run the example server test:
-
-1. Move `/test/_example/examples/test.ts` into `/server/api/`.
-2. Launch your development server with `bun run dev`.
-3. Run Vitest with `bun run test` in a seperate terminal.
-    - Do not run `bun test` as shorthand. This will initiate Bun's test runner, which does not have the correct context and will fail.
+To run it: `bun run test` (or scope to the project with `bun run test -- --project e2e`).
+Do not run `bun test` as shorthand - this invokes Bun's test runner, which lacks the correct context and will fail.
 
 Refer to the H3 [event handler](https://h3.unjs.io/guide/event-handler) and [event object](https://h3.unjs.io/guide/event) for more info,
 as well as the Nuxt [server](https://nuxt.com/docs/guide/directory-structure/server) docs for Nuxt-specific usage.
