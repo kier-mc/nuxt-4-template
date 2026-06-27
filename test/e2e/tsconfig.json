@@ -1,0 +1,5 @@
+{
+    // E2E tests run in Node and sit outside the Nuxt-generated TS projects (which only cover `test/nuxt/**`), so they get their own project here.
+    "extends": "../../.nuxt/tsconfig.node.json",
+    "include": ["./**/*"]
+}
