@@ -12,7 +12,7 @@
     },
     "dependencies": {
         "nuxt": "^4.4.8",
-        "vue": "^3.5.39"
+        "vue": "^3.5.40"
     },
     "devDependencies": {
         "@antfu/eslint-config": "^9.1.0",
@@ -36,14 +36,14 @@
         "stylelint-config-standard": "^40.0.0",
         "stylelint-config-standard-scss": "^17.0.0",
         "stylelint-declaration-block-no-ignored-properties": "^3.0.0",
-        "stylelint-plugin-defensive-css": "^2.9.3",
+        "stylelint-plugin-defensive-css": "^2.9.4",
         "stylelint-plugin-logical-css": "^2.1.0",
         "stylelint-scss": "^7.2.0",
         "vitest": "^4.1.10"
     },
     "overrides": {
-        "@vue/server-renderer": "^3.5.39",
-        "vue": "^3.5.39"
+        "@vue/server-renderer": "^3.5.40",
+        "vue": "^3.5.40"
     },
     "trustedDependencies": [
         "@parcel/watcher",
